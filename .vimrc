@@ -61,6 +61,9 @@ nnoremap gh :call CocAction('runCommand', 'clangd.symbolInfo')<CR>
 nnoremap ,c :call NERDComment(0,"toggle")<CR>
 vnoremap ,c :call NERDComment(0,"toggle")<CR>
 
+let g:zig_fmt_autosave = 0
+
+
 set nobackup
 set noswapfile
 set noundofile
