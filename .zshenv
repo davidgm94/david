@@ -10,3 +10,8 @@ ccd ()
 	mkdir -p -- "$1" &&
 	cd -P -- "$1"
 }
+
+if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
+        source /etc/profile.d/vte.sh
+fi
+source "$HOME/.cargo/env"
