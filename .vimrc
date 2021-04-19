@@ -5,6 +5,7 @@ if empty(glob('~/.vim/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 call plug#begin('~/.vim/plugged')
+Plug 'morhetz/gruvbox'
 Plug 'ziglang/zig.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'preservim/nerdcommenter'
@@ -46,6 +47,7 @@ set wildmenu
 let mapleader=","
 
 nnoremap <silent> <leader>f :GFiles<CR>
+nnoremap <silent> <leader>g :Rg<CR>
 
 nmap <silent> gp <Plug>(coc-diagnostic-prev)
 nmap <silent> gn <Plug>(coc-diagnostic-next)
@@ -68,3 +70,6 @@ set nobackup
 set noswapfile
 set noundofile
 set relativenumber
+
+colorscheme gruvbox
+set background=dark

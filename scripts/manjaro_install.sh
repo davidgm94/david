@@ -12,7 +12,7 @@ ssh-add
 mkdir $HOME/git && cd $HOME/git
 git clone git@github.com:davidgm94/david.git
 sudo rsync -a $HOME/git/david $HOME/david
-sudo pacman -S tilix rustup lldb gdb gvim nodejs brave tree code llvm make cmake nemiver
+sudo pacman -S tilix rustup lldb gdb gvim nodejs npm brave tree code llvm make cmake nemiver
 # make Whatsapp shortcut
 cp 
 # config rustup
