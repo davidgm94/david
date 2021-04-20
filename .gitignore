@@ -84,3 +84,5 @@ programs/
 .zshrc
 Desktop
 .oh-my-zsh
+.hplip
+.python_history
