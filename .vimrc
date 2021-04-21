@@ -71,5 +71,6 @@ set noswapfile
 set noundofile
 set relativenumber
 
+let &t_ut=''
 colorscheme gruvbox
 set background=dark
