@@ -34,6 +34,7 @@ set smartcase
 set cursorline
 set ai
 set si
+set nofoldenable
 filetype indent on
 filetype plugin on
 
@@ -47,6 +48,7 @@ set wildmenu
 let mapleader=","
 
 nnoremap <silent> <leader>f :GFiles<CR>
+nnoremap <silent> <leader>d :Files<CR>
 nnoremap <silent> <leader>g :Rg<CR>
 
 nmap <silent> gp <Plug>(coc-diagnostic-prev)

@@ -74,7 +74,6 @@ software
 vk_apidump.txt
 .dbus
 .gdb_history
-.inputrc
 .ssh
 .xsession
 .zsh_history

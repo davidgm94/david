@@ -5,7 +5,7 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-alias ls='ls --color=auto'
+alias ls='ls --color=auto -a1'
 PS1='[\u@\h \W]\$ '
 
 export PATH=$PATH:$HOME/.cargo/bin:$HOME/scripts:$HOME/programs:$HOME/programs/clion-2020.3/bin:$HOME/programs/zls:$HOME/programs/zig-master
