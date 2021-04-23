@@ -11,3 +11,4 @@ export PATH=$PATH:$HOME/.cargo/bin:$HOME/scripts:$HOME/programs:$HOME/programs/c
 alias ls='ls --color=auto -a1'
 alias start="xdg-open"
 alias gst="git status"
+alias ssh="kitty +kitten ssh"
