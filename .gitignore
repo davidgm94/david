@@ -84,3 +84,12 @@ Desktop
 .hplip
 .python_history
 .swt
+.ACEStream
+.intel
+.kodi
+Nextcloud
+foo*
+intel
+perf*
+test
+l_Base*
