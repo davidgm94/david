@@ -1,8 +1,6 @@
 #!/bin/sh
 
-sudo pacman -S rustup lldb gdb gvim nodejs npm brave tree code llvm make cmake nemiver 
-# make Whatsapp shortcut
+sudo pacman -Sy rustup lldb gdb gvim nodejs npm chromium tree code llvm make cmake nemiver neovim kitty
 # config rustup
 rustup default stable
-# confix tilix
 
