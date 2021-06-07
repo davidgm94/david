@@ -12,6 +12,7 @@ Plug 'preservim/nerdcommenter'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'rust-lang/rust.vim'
+Plug 'lervag/vimtex'
 call plug#end()
 
 " No vi config
