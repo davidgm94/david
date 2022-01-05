@@ -1,0 +1,13 @@
+{
+   "languageserver": {
+       "zls" : {
+           "command": "/home/david/git/zls/zig-out/bin/zls",
+           "filetypes": ["zig"]
+       },
+       "rust": {
+           "command": "rust-analyzer",
+           "filetypes": ["rust"],
+           "rootPatterns": ["Cargo.toml"]
+       }
+   }
+}
