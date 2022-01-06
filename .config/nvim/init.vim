@@ -117,6 +117,7 @@ lua <<EOF
     
     require('rust-tools').setup(opts)
     require'lspconfig'.zls.setup{}
+    require'lspconfig'.clangd.setup{}
 EOF
 
 " Code navigation shortcuts
