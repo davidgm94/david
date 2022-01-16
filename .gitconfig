@@ -1,0 +1,10 @@
+[user]
+    name = David Gonzalez Martin
+    email = davidgm94.work@protonmail.com
+    username = davidgm94
+[core]
+    editor = nvim
+[github]
+    user = davidgm94
+[init]
+	defaultBranch = main
