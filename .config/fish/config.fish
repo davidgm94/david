@@ -23,6 +23,6 @@ set MYHOME "/home/david"
 set GIT_DIR "$MYHOME/git"
 set PROGRAMS_DIR "$MYHOME/programs"
 set HOMEBREW_BIN_DIR "/home/linuxbrew/.linuxbrew/bin"
-set PATH "$PATH:$HOMEBREW_BIN_DIR:$MYHOME/.cargo/bin:$PROGRAMS_DIR:$GIT_DIR/zls/zig-out/bin:$GIT_DIR/gf"
-
 set ZIG_DIR "$PROGRAMS_DIR/zig-master"
+set PATH "$PATH:$HOMEBREW_BIN_DIR:$MYHOME/.cargo/bin:$PROGRAMS_DIR:$GIT_DIR/zls/zig-out/bin:$GIT_DIR/gf:$ZIG_DIR"
+

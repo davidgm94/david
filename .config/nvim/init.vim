@@ -183,8 +183,8 @@ set updatetime=300
 autocmd CursorHold * lua vim.diagnostic.open_float()
 
 " Goto previous/next diagnostic warning/error
-nnoremap <silent> g[ <cmd>lua vim.lsp.diagnostic.goto_prev()<CR>
-nnoremap <silent> g] <cmd>lua vim.lsp.diagnostic.goto_next()<CR>
+nnoremap <silent> g[ :lprev<CR>
+nnoremap <silent> g] :lnext<CR>
 
 " Theme
 colorscheme gruvbox

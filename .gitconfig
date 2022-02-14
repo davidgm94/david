@@ -7,4 +7,9 @@
 [github]
     user = davidgm94
 [init]
-	defaultBranch = main
+    defaultBranch = main
+[filter "lfs"]
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
