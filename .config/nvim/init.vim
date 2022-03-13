@@ -190,8 +190,8 @@ nnoremap <silent> g] :lnext<CR>
 colorscheme gruvbox
 set background=dark
 
-" Zig
-let g:zig_fmt_autosave = 0
+" Zig. For now we are friends with zig fmt
+"let g:zig_fmt_autosave = 0
 
 " FZF
 let g:fuf_file_exclude = '\v\~$|\.o$|\.exe$|\.bak$|\.swp$|\.class$|\.out$|\.bin$|\.elf$'
