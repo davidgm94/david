@@ -7,8 +7,10 @@ call plug#begin('~/.vim/plugged')
 Plug 'morhetz/gruvbox'
 Plug 'ziglang/zig.vim'
 Plug 'preservim/nerdcommenter'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
+Plug 'nvim-lua/popup.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-treesitter/nvim-treesitter'
 
 " Collection of common configurations for the Nvim LSP client
 Plug 'neovim/nvim-lspconfig'
@@ -175,6 +177,12 @@ cmp.setup({
     { name = 'buffer' },
   },
 })
+
+require'nvim-treesitter.configs'.setup {
+  highlight = {
+    enable = true
+  },
+}
 EOF
 
 " have a fixed column for the diagnostics to appear in
@@ -200,11 +208,10 @@ set background=dark
 
 " FZF
 let g:fuf_file_exclude = '\v\~$|\.o$|\.exe$|\.bak$|\.swp$|\.class$|\.out$|\.bin$|\.elf$'
-nnoremap <silent> <leader>f :GFiles<CR>
-nnoremap <silent> <leader>d :Files<CR>
-nnoremap <silent> <leader>g :Rg<CR>
+nnoremap <silent> <leader>f :Telescope git_files<CR>
+nnoremap <silent> <leader>d :Telescope find_files hidden=true<CR>
+nnoremap <silent> <leader>g :Telescope live_grep<CR>
 
 " NerdCommenter
 nnoremap ,c :call nerdcommenter#Comment(0,"toggle")<CR>
 vnoremap ,c :call nerdcommenter#Comment(0,"toggle")<CR>
-

@@ -55,12 +55,12 @@ let-env NU_PLUGIN_DIRS = [
 ]
 
 # To add entries to PATH (on Windows you might use Path), you can use the following pattern:
-let-env DEV_DIR = ($env.HOME | path join 'git')
+let-env DEV_DIR = ($env.HOME | path join 'dev')
 let-env PROGRAMS_DIR = ($env.HOME | path join 'programs')
 let-env LINUX_HOMEBREW_BIN_DIR = '/home/linuxbrew/.linuxbrew/bin'
 let-env ZIG_STABLE_DIR = ($env.PROGRAMS_DIR | path join 'zig_stable')
 let-env ZIG_UNSTABLE_DIR = ($env.PROGRAMS_DIR | path join 'zig_unstable')
-let-env ZLS_DIR = ($env.PROGRAMS_DIR | path join 'zls/zig-out/bin')
+let-env ZLS_DIR = ($env.DEV_DIR | path join 'zls/zig-out/bin')
 let-env CARGO_BIN_DIR = ($env.HOME | path join '.cargo/bin')
 let-env GF_DIR = ($env.DEV_DIR | path join 'gf')
 let-env PATH = ($env.PATH |
