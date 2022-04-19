@@ -1,0 +1,62 @@
+# 1. Install brew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+# 2. Install nushell
+/home/linuxbrew/.linuxbrew/bin/brew install nu
+sudo /bin/bash -c "echo /home/linuxbrew/.linuxbrew/bin/nu >> /etc/shells"
+sudo chsh -s /home/linuxbrew/.linuxbrew/bin/nu david
+# 3. Alacritty
+sudo apt install alacritty kitty
+
+# Install Signal - we are going to need for key information retrieval
+# NOTE: These instructions only work for 64 bit Debian-based
+# Linux distributions such as Ubuntu, Mint etc.
+
+# 1. Install our official public software signing key
+wget -O- https://updates.signal.org/desktop/apt/keys.asc | gpg --dearmor > signal-desktop-keyring.gpg
+cat signal-desktop-keyring.gpg | sudo tee -a /usr/share/keyrings/signal-desktop-keyring.gpg > /dev/null
+
+# 2. Add our repository to your list of repositories
+echo 'deb [arch=amd64 signed-by=/usr/share/keyrings/signal-desktop-keyring.gpg] https://updates.signal.org/desktop/apt xenial main' |\
+  sudo tee -a /etc/apt/sources.list.d/signal-xenial.list
+
+# 3. Update your package database and install signal
+sudo apt update && sudo apt install signal-desktop
+
+# Install Bitwarden in Firefox, login into Firefox and get the SSH keys
+# Adjust touchpad if applicable
+
+# Copy them into .ssh
+chmod 700 ~/.ssh
+chmod 644 ~/.ssh/authorized_keys
+chmod 644 ~/.ssh/known_hosts
+chmod 644 ~/.ssh/config
+chmod 600 ~/.ssh/id_ed25519
+chmod 644 ~/.ssh/id_ed25519.pub
+
+sudo apt install snapd
+sudo snap install acestreamplayer
+sudo apt install telegram-desktop
+
+git config --global init.defaultBranch main
+git init
+git remote add origin git@github.com:davidgm94/david.git
+
+# Make sure you have your SSH password copied
+git pull
+git pull origin main
+
+# Fix merge conflicts
+# Quit the terminal
+
+brew install neovim
+nvim
+# Wait until PlugInstall is available
+# Quit nvim
+brew install fzf ripgrep
+sudo apt install discord
+brew install bat qemu zig
+git clone --recurse-submodules git@github.com:davidgm94/zls.git /home/david/dev/zls
+cd /home/david/dev/zls
+git checkout 0.9.0
+zig build -Drelease-fast
+
