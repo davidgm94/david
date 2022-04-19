@@ -4,6 +4,9 @@
     username = davidgm94
 [core]
     editor = nvim
+    lf = open
+    eol = lf
+    autocrlf = false
 [github]
     user = davidgm94
 [init]

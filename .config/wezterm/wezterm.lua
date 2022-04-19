@@ -34,6 +34,7 @@ for x = 1, 9 do
 end
 
 return {
+    default_prog = {"nu", "--config", wezterm.home_dir .. "/.config/nushell/config.nu", "--env-config", wezterm.home_dir .. "./.config/nushell/env.nu" },
     check_for_updates = false,
     harfbuzz_features = {"calt=0", "clig=0", "liga=0"},
     warn_about_missing_glyphs = false,

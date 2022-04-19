@@ -29,6 +29,28 @@ let-env PROMPT_MULTILINE_INDICATOR = { "::: " }
 # - converted from a string to a value on Nushell startup (from_string)
 # - converted from a value back to a string when running external commands (to_string)
 # Note: The conversions happen *after* config.nu is loaded
+#
+
+def get_home [os] {
+    if ($os == "Windows") {
+        ($env.USERPROFILE)
+    } else {
+        ($env.HOME)
+    }
+}
+
+def get_path [os] {
+    if ($os == "Windows") {
+        ($env.Path)
+    } else {
+        ($env.PATH)
+    }
+}
+
+let OS = ((sys).host.name)
+let-env HOME = (get_home $OS)
+let-env PATH = (get_path $OS)
+
 let-env ENV_CONVERSIONS = {
   "PATH": {
     from_string: { |s| $s | split row (char esep) }
@@ -73,3 +95,4 @@ let-env PATH = ($env.PATH |
     prepend $env.ZLS_DIR |
     prepend $env.GF_DIR
 )
+let-env Path = ($env.PATH)
