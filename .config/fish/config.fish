@@ -20,7 +20,7 @@ end
 
 set MYHOME "/home/david"
 
-set GIT_DIR "$MYHOME/git"
+set GIT_DIR "$MYHOME/dev"
 set PROGRAMS_DIR "$MYHOME/programs"
 set HOMEBREW_BIN_DIR "/home/linuxbrew/.linuxbrew/bin"
 set ZIG_DIR "$PROGRAMS_DIR/zig-master"
