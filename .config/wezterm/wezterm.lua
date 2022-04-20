@@ -33,8 +33,17 @@ for x = 1, 9 do
     });
 end
 
+local function get_nu_exe()
+    if (wezterm.target_triple == "x86_64-unknown-linux-gnu") then return "/home/linuxbrew/.linuxbrew/bin/nu"
+    else return "nu"
+    end
+end
+
 return {
-    default_prog = {"nu", "--config", wezterm.home_dir .. "/.config/nushell/config.nu", "--env-config", wezterm.home_dir .. "./.config/nushell/env.nu" },
+    default_prog = {get_nu_exe(), "--config", wezterm.home_dir .. "/.config/nushell/config.nu", "--env-config", wezterm.home_dir .. "/.config/nushell/env.nu" },
+    set_environment_variables = {
+        fooo = "asdasdasd",
+    },
     check_for_updates = false,
     harfbuzz_features = {"calt=0", "clig=0", "liga=0"},
     warn_about_missing_glyphs = false,
