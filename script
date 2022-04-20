@@ -60,3 +60,7 @@ cd /home/david/dev/zls
 git checkout 0.9.0
 zig build -Drelease-fast
 
+
+# Install wezterm
+sudo update-alternatives --install /usr/bin/x-terminal-emulator x-terminal-emulator /usr/bin/wezterm 500
+sudo update-alternatives --config x-terminal-emulator

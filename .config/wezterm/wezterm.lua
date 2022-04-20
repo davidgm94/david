@@ -4,35 +4,6 @@ wezterm.on("format-window-title", function(tab, tabs, panes, config)
     return tab.active_pane.title
 end)
 
-local keys = {
-    {key="phys:F", mods="LEADER|CTRL", action=wezterm.action{SendString="\x05"}},
-    {key="phys:J", mods="LEADER|CTRL", action=wezterm.action{SpawnTab="CurrentPaneDomain"}},
-    {key="phys:E", mods="LEADER|CTRL", action=wezterm.action{ActivateTabRelative=-1}},
-    {key="n", mods="LEADER|CTRL", action=wezterm.action{ActivateTabRelative=1}},
-    {key="phys:H", mods="LEADER|CTRL", action=wezterm.action{MoveTabRelative=-1}},
-    {key="phys:L", mods="LEADER|CTRL", action=wezterm.action{MoveTabRelative=1}},
-    {key="phys:V", mods="CTRL|SHIFT", action=wezterm.action{SplitVertical={domain="CurrentPaneDomain"}}},
-    {key="phys:H", mods="CTRL|SHIFT", action=wezterm.action{SplitHorizontal={domain="CurrentPaneDomain"}}},
-    {key="phys:H", mods="LEADER", action=wezterm.action{ActivatePaneDirection="Left"}},
-    {key="phys:J", mods="LEADER", action=wezterm.action{ActivatePaneDirection="Down"}},
-    {key="phys:K", mods="LEADER", action=wezterm.action{ActivatePaneDirection="Up"}},
-    {key="phys:L", mods="LEADER", action=wezterm.action{ActivatePaneDirection="Right"}},
-    {key="mapped:-", mods="CTRL", action="DecreaseFontSize"},
-    {key="mapped:+", mods="CTRL", action="IncreaseFontSize"},
-    {key="mapped:=", mods="CTRL", action="ResetFontSize"},
-    {key="Insert", mods="SHIFT", action="Paste"},
-    {key="PageUp", mods="SHIFT", action=wezterm.action{ScrollByPage=-1}},
-    {key="PageDown", mods="SHIFT", action=wezterm.action{ScrollByPage=1}},
-};
-
-for x = 1, 9 do
-    table.insert(keys, {
-        key = tostring(x),
-        mods = "LEADER|SHIFT",
-        action = wezterm.action{ActivateTab = x - 1},
-    });
-end
-
 local function get_nu_exe()
     if (wezterm.target_triple == "x86_64-unknown-linux-gnu") then return "/home/linuxbrew/.linuxbrew/bin/nu"
     else return "nu"
@@ -50,9 +21,7 @@ return {
     color_scheme = "Builtin Tango Dark",
     exit_behavior = "Close",
     font_size = 12.0,
-    disable_default_key_bindings = true,
     leader = { key="phys:F", mods="CTRL", timeout_milliseconds=1000 },
-    keys = keys,
     hide_tab_bar_if_only_one_tab = true,
     tab_bar_at_bottom = true,
     window_padding = {
