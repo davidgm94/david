@@ -80,6 +80,7 @@ let-env NU_PLUGIN_DIRS = [
 let-env DEV_DIR = ($env.HOME | path join 'dev')
 let-env PROGRAMS_DIR = ($env.HOME | path join 'programs')
 let-env LINUX_HOMEBREW_BIN_DIR = '/home/linuxbrew/.linuxbrew/bin'
+let-env MACOS_HOMEBREW_BIN_DIR = '/opt/homebrew/bin'
 let-env ZIG_STABLE_DIR = ($env.PROGRAMS_DIR | path join 'zig_stable')
 let-env ZIG_UNSTABLE_DIR = ($env.PROGRAMS_DIR | path join 'zig_unstable')
 let-env ZLS_DIR = ($env.DEV_DIR | path join 'zls/zig-out/bin')
@@ -90,7 +91,7 @@ let-env PATH = ($env.PATH |
     prepend $env.ZIG_STABLE_DIR |
     prepend $env.ZIG_UNSTABLE_DIR |
     prepend $env.LINUX_HOMEBREW_BIN_DIR |
-    prepend $env.LINUX_HOMEBREW_BIN_DIR |
+    prepend $env.MACOS_HOMEBREW_BIN_DIR |
     prepend $env.CARGO_BIN_DIR |
     prepend $env.ZLS_DIR |
     prepend $env.GF_DIR
