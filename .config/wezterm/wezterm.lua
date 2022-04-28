@@ -5,8 +5,7 @@ wezterm.on("format-window-title", function(tab, tabs, panes, config)
 end)
 
 local function get_nu_exe()
-    if (wezterm.target_triple == "x86_64-unknown-linux-gnu") then return "/home/linuxbrew/.linuxbrew/bin/nu"
-    elseif (wezterm.target_triple == "aarch64-apple-darwin") then return "/opt/homebrew/bin/nu"
+    if (wezterm.target_triple == "aarch64-apple-darwin") then return "/opt/homebrew/bin/nu"
     else return "nu"
     end
 end
