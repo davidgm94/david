@@ -1,4 +1,4 @@
-sudo pacman -S firefox autorandr arandr wezterm git neovim xclip alacritty os-prober ntfs-3g blueman pavucontrol ttf-font-awesome rofi signal-desktop telegram-desktop dolphin zig qemu qemu-arch-extra
+sudo pacman -S firefox autorandr arandr wezterm git neovim xclip alacritty os-prober ntfs-3g blueman pavucontrol ttf-font-awesome rofi signal-desktop telegram-desktop dolphin zig qemu qemu-arch-extra nushell
 
 # Yay installation
 git clone https://aur.archlinux.org/yay.git
