@@ -129,3 +129,4 @@ export CARGO_BIN_DIR="$HOME/.cargo/bin"
 export GF_BIN_DIR="$DEV_DIR/gf"
 export PATH="$PATH:$DEV_DIR:$PROGRAMS_DIR:$HOMEBREW_BIN_DIR:$ZLS_BIN_DIR:$CARGO_BIN_DIR:$GF_BIN_DIR"
 
+. "$HOME/.cargo/env"
