@@ -1,9 +1,5 @@
 # 1. Install brew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-# 2. Install nushell
-/home/linuxbrew/.linuxbrew/bin/brew install nu
-sudo /bin/bash -c "echo /home/linuxbrew/.linuxbrew/bin/nu >> /etc/shells"
-sudo chsh -s /home/linuxbrew/.linuxbrew/bin/nu david
 # 3. Alacritty
 sudo apt install alacritty kitty
 
@@ -48,19 +44,13 @@ git pull origin main
 # Fix merge conflicts
 # Quit the terminal
 
-brew install neovim
-nvim
-# Wait until PlugInstall is available
-# Quit nvim
-brew install fzf ripgrep
-sudo apt install discord
-brew install bat qemu zig
+brew install neovim ripgrep bat qemu zig
+
 git clone --recurse-submodules git@github.com:davidgm94/zls.git /home/david/dev/zls
 cd /home/david/dev/zls
 git checkout 0.9.0
 zig build -Drelease-fast
 
 
-# Install wezterm
-sudo update-alternatives --install /usr/bin/x-terminal-emulator x-terminal-emulator /usr/bin/wezterm 500
-sudo update-alternatives --config x-terminal-emulator
+# Install kityy as the default terminal emulator
+sudo update-alternatives --install /usr/bin/x-terminal-emulator x-terminal-emulator /usr/bin/kitty 500
