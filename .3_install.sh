@@ -14,3 +14,6 @@ zig build -Drelease-fast
 
 # Install kityy as the default terminal emulator
 sudo update-alternatives --install /usr/bin/x-terminal-emulator x-terminal-emulator /usr/bin/kitty 500
+
+# Install Rust
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
