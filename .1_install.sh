@@ -14,7 +14,7 @@ echo 'deb [arch=amd64 signed-by=/usr/share/keyrings/signal-desktop-keyring.gpg] 
 # 1. Install brew
 sudo apt update && sudo apt upgrade
 # Install basic software
-sudo apt install snapd telegram-desktop lm-sensors htop alacritty kitty signal-desktop
+sudo apt install snapd telegram-desktop lm-sensors htop alacritty kitty signal-desktop discord
 # Install Brew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 # Install Acestream
