@@ -3,9 +3,9 @@
 # These commands should be run after the environment variables are set
 
 # Quit the terminal
-brew install neovim ripgrep bat qemu zig
+brew install neovim ripgrep bat qemu zig rust-analyzer
 # Twice because the first one might fail
-brew install neovim ripgrep bat qemu zig
+brew install neovim ripgrep bat qemu zig rust-analyzer
 
 git clone --recurse-submodules git@github.com:davidgm94/zls.git /home/david/dev/zls
 cd /home/david/dev/zls
