@@ -212,6 +212,7 @@ let g:fuf_file_exclude = '\v\~$|\.o$|\.exe$|\.bak$|\.swp$|\.class$|\.out$|\.bin$
 nnoremap <silent> <leader>f :Telescope git_files<CR>
 nnoremap <silent> <leader>d :Telescope find_files hidden=true<CR>
 nnoremap <silent> <leader>g :Telescope live_grep<CR>
+nnoremap <silent> <leader>r :Telescope resume<CR>
 
 " NerdCommenter
 nnoremap ,c :call nerdcommenter#Comment(0,"toggle")<CR>
