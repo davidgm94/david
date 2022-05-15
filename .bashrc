@@ -118,7 +118,7 @@ fi
 
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
     export HOMEBREW_BIN_DIR="/home/linuxbrew/.linuxbrew/bin"
-elif [[ "OSTYPE" == "darwin"* ]]; then
+elif [[ "$OSTYPE" == "darwin"* ]]; then
     export HOMEBREW_BIN_DIR="/opt/homebrew/bin"
 fi
 
