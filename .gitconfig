@@ -18,3 +18,5 @@
     required = true
 [credential]
     helper = store
+[credential "helperselector"]
+	selected = store

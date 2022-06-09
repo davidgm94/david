@@ -33,4 +33,6 @@ return {
         top = 0,
         bottom = 0,
     },
+    initial_cols = 180,
+    initial_rows = 45,
 }

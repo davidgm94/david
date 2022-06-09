@@ -86,7 +86,6 @@ let-env ZIG_UNSTABLE_DIR = ($env.PROGRAMS_DIR | path join 'zig_unstable')
 let-env ZLS_DIR = ($env.DEV_DIR | path join 'zls/zig-out/bin')
 let-env CARGO_BIN_DIR = ($env.HOME | path join '.cargo/bin')
 let-env GF_DIR = ($env.DEV_DIR | path join 'gf')
-let-env REMEDYBG_DIR = ($env.PROGRAMS_DIR | path join 'remedybg')
 let-env PATH = ($env.PATH |
     prepend $env.PROGRAMS_DIR |
     prepend $env.ZIG_STABLE_DIR |
@@ -95,7 +94,6 @@ let-env PATH = ($env.PATH |
     prepend $env.MACOS_HOMEBREW_BIN_DIR |
     prepend $env.CARGO_BIN_DIR |
     prepend $env.ZLS_DIR |
-    prepend $env.GF_DIR |
-    prepend $env.REMEDYBG_DIR
+    prepend $env.GF_DIR
 )
 let-env Path = ($env.PATH)
