@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo pacman -S git firefox telegram-desktop signal-desktop lm_sensors htop alacritty kitty wezterm discord gdb neovim ripgrep bat qemu qemu-arch-extra zig rust-analyzer rustup mpv vlc smplayer nodejs tokei nushell bash-completion libreoffice xorriso
+sudo pacman -S git firefox telegram-desktop signal-desktop lm_sensors htop alacritty kitty wezterm discord gdb neovim ripgrep bat qemu qemu-arch-extra zig rust-analyzer rustup mpv vlc smplayer nodejs tokei nushell bash-completion libreoffice xorriso llvm
 
 rustup toolchain install stable
 
