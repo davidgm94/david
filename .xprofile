@@ -1,0 +1,5 @@
+#!/bin/sh
+
+[[ -f ~/scripts/screen.sh ]] && source ~/scripts/screen.sh
+[[ -f ~/.Xresources ]] && xrdb -merge -I$HOME ~/.Xresources
+
