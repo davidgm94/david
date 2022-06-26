@@ -184,7 +184,3 @@ bindsym $mod+r mode "resize"
 bar {
     status_command i3status
 }
-
-#exec --no-startup-id $HOME/scripts/screen.sh
-
-#workspace 0 output $MY_PRIMARY_MONITOR
