@@ -57,6 +57,8 @@ static const char *brdowncmd[] = { "sudo", "xbacklight", "-dec", "10", NULL };
 static const char *medplaypausecmd[] = { "playerctl", "play-pause", NULL };
 static const char *mednextcmd[] = { "playerctl", "next", NULL };
 static const char *medprevcmd[] = { "playerctl", "previous", NULL };
+// Shutdown
+static const char *shutcmd[] = { "sudo", "shutdown", "-h", "now", NULL };
 
 #define MODKEY Mod1Mask
 #define TAGKEYS(KEY,TAG) \
@@ -119,6 +121,8 @@ static Key keys[] = {
     { 0, XF86XK_AudioPlay, spawn, {.v = medplaypausecmd } },
     { 0, XF86XK_AudioNext, spawn, {.v = mednextcmd } },
     { 0, XF86XK_AudioPrev, spawn, {.v = medprevcmd } },
+    // Shutdown
+	{ MODKEY|ShiftMask,             XK_s, spawn, {.v = shutcmd } },
 };
 
 /* button definitions */
