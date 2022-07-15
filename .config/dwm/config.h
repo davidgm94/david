@@ -74,6 +74,8 @@ static const char *shutcmd[] = { "sudo", "shutdown", "-h", "now", NULL };
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "kitty", NULL };
+static const char* screenshot_clipboard[] = { "xfce4-screenshooter", "-c", "-r", NULL };
+static const char* screenshot_interactive[] = { "mate-screenshot", "-i", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -122,7 +124,11 @@ static Key keys[] = {
     { 0, XF86XK_AudioNext, spawn, {.v = mednextcmd } },
     { 0, XF86XK_AudioPrev, spawn, {.v = medprevcmd } },
     // Shutdown
-	{ MODKEY|ShiftMask,             XK_s, spawn, {.v = shutcmd } },
+	//{ 0, MODKEY|ShiftMask,             XK_s, spawn, {.v = shutcmd } },
+    // Screenshot clipboard
+	{ 0, XK_Print,             spawn, {.v = screenshot_clipboard } },
+    // Screenshot interactive
+	{ ShiftMask, XK_Print, spawn, {.v = screenshot_interactive } },
 };
 
 /* button definitions */

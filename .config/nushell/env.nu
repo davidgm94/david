@@ -81,10 +81,11 @@ let-env DEV_DIR = ($env.HOME | path join 'dev')
 let-env PROGRAMS_DIR = ($env.HOME | path join 'programs')
 let-env LINUX_HOMEBREW_BIN_DIR = '/home/linuxbrew/.linuxbrew/bin'
 let-env MACOS_HOMEBREW_BIN_DIR = '/opt/homebrew/bin'
-let-env ZIG_STAGE1_BIN_DIR = ($env.DEV_DIR | path join 'zig/build/stage1/bin')
+let-env ZIG_STAGE1_BIN_DIR = ($env.DEV_DIR | path join 'zig/stage1/bin')
 let-env ZLS_DIR = ($env.DEV_DIR | path join 'zls/zig-out/bin')
 let-env CARGO_BIN_DIR = ($env.HOME | path join '.cargo/bin')
 let-env GF_DIR = ($env.DEV_DIR | path join 'gf')
+let-env ZIG_LLVM_DIR = '/usr/lib/llvm13/bin'
 let-env PATH = ($env.PATH |
     prepend $env.PROGRAMS_DIR |
     prepend $env.ZIG_STAGE1_BIN_DIR |
@@ -92,6 +93,7 @@ let-env PATH = ($env.PATH |
     prepend $env.MACOS_HOMEBREW_BIN_DIR |
     prepend $env.CARGO_BIN_DIR |
     prepend $env.ZLS_DIR |
+    prepend $env.ZIG_LLVM_DIR |
     prepend $env.GF_DIR
 )
 let-env Path = ($env.PATH)
